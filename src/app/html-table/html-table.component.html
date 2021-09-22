@@ -4,19 +4,15 @@
             <th width="50">name</th>
             <th>scope</th>
             <th>version</th>
-            <th>description</th>
-            <th>Date</th>
-            <th>keywords</th>
+            <th>date</th>
         </tr>
     </thead>
-    <tbody *ngFor="let package of baseObject.results">
+    <tbody *ngFor="let result of baseObject.results">
         <tr>
-            <td>{{package.package.name}}</td>
-            <td>{{package.package.scope}}</td>
-            <td>{{package.package.version }}</td>
-            <td>{{package.package.description}}</td>
-            <td>{{package.package.date}}</td>
-            <td>{{package.package.keywords}}</td>
+            <td>{{result.package.name}}</td>
+            <td>{{result.package.scope}}</td>
+            <td>{{result.package.version}}</td>
+            <td>{{result.package.date}}</td>
         </tr>
     </tbody>
 </table>
