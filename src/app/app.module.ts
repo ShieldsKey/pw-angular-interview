@@ -9,12 +9,14 @@ import {MatTableModule} from '@angular/material/table';
 import { MaterialTableComponent } from './material-table/material-table.component';
 import { HtmlTableComponent } from './html-table/html-table.component';
 import { RouterModule } from '@angular/router';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MaterialTableComponent,
-    HtmlTableComponent
+    HtmlTableComponent,
+    PageNotFoundComponent
   ],
   imports: [
     MatTableModule,
