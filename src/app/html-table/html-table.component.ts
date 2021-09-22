@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
-import { HttpService } from 'src/app/http.service';
-import { RootObject } from 'src/app/interfaces/searchResults';
+import { HttpService } from '../http.service';
+import { Result, RootObject } from '../interfaces/searchResults';
 
 @Component({
   selector: 'app-html-table',
@@ -9,26 +8,15 @@ import { RootObject } from 'src/app/interfaces/searchResults';
   styleUrls: ['./html-table.component.scss']
 })
 export class HtmlTableComponent implements OnInit {
-    totalAngularPackages: number  = 0 ;
-
-    packages: any[];
-    baseObject$: Observable<RootObject>
-
+    public results: Result[];
+    public totalAngularPackages: number;
     constructor(private readonly httpService: HttpService) { }
 
     public ngOnInit(): void {
-        // this.getProductsUsingSubscribeMethod();
-         this.getProductsUsingAsyncPipe();
-    }
-
-    public getProductsUsingSubscribeMethod() {
         this.httpService.getSearchResults().subscribe((data: RootObject) => {
-            this.packages =  data.results;
+            this.results =  data.results;
             this.totalAngularPackages = data.total;
         });
     }
 
-    public getProductsUsingAsyncPipe() {
-            this.baseObject$ =this.httpService.getSearchResults();
-    }
   }
