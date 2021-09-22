@@ -1,0 +1,23 @@
+<table class="table table-bordered" *ngIf="baseObject$ | async as baseObject; else loading;">
+    <thead>
+        <tr>
+            <th width="50">name</th>
+            <th>scope</th>
+            <th>version</th>
+            <th>description</th>
+            <th>Date</th>
+            <th>keywords</th>
+        </tr>
+    </thead>
+    <tbody *ngFor="let package of baseObject.results">
+        <tr>
+            <td>{{package.package.name}}</td>
+            <td>{{package.package.scope}}</td>
+            <td>{{package.package.version }}</td>
+            <td>{{package.package.description}}</td>
+            <td>{{package.package.date}}</td>
+            <td>{{package.package.keywords}}</td>
+        </tr>
+    </tbody>
+</table>
+<ng-template #loading>Loading...</ng-template>
