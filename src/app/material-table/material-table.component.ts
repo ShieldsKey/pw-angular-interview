@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Result, RootObject } from 'src/app/interfaces/searchResults';
-import { HttpService } from '../../../app/http.service';
+import { HttpService } from '../../app/http.service';
 
 @Component({
   selector: 'app-material-table',
@@ -10,7 +10,7 @@ import { HttpService } from '../../../app/http.service';
 export class MaterialTableComponent implements OnInit {
 
     dataSource: any[];
-    displayedColumns: string[] = ['name', 'scope', 'version', 'description'];
+    displayedColumns: string[] = ['name', 'scope', 'version', 'date'];
     constructor(private readonly httpService: HttpService) { }
 
     public ngOnInit(): void {
