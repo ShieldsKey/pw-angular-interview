@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Result, RootObject } from 'src/app/interfaces/searchResults';
+import { Result, RootObject } from '../../app/interfaces/searchResults';
 import { HttpService } from '../../app/http.service';
 
 @Component({
