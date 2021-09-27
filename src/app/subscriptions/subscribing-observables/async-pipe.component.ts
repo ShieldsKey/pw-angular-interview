@@ -8,7 +8,5 @@ import { getDelayedValueObservable, getMultiValueObservable, getSingleValueObser
   })
   export class AsyncPipeComponent {
     show = false;
-    first$ = getSingleValueObservable();
-    second$ = getDelayedValueObservable();
-    third$ = getMultiValueObservable();
+
   }

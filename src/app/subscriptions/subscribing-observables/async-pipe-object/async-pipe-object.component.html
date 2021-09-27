@@ -3,10 +3,10 @@
 
 <ng-container *ngIf="show">
   <ng-container
-    *ngIf="{ first: first$ | async, second: second$ | async, third: third$ | async } as values;"
+
   >
-    <p>{{values.first}}</p>
-    <p>{{values.second}}</p>
-    <p>multi values {{values.third}}</p>
+    <p>{{first}}</p>
+    <p>{{second}}</p>
+    <p>multi values {{third}}</p>
   </ng-container>
 </ng-container>

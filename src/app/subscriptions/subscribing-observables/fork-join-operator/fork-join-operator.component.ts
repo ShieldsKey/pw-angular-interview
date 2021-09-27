@@ -9,14 +9,5 @@ import { getDelayedValueObservable, getSingleValueObservable } from '../../subsc
   })
   export class ForkJoinOperatorComponent {
     show = false;
-    values$ = forkJoin(
-      getSingleValueObservable(),
-      getDelayedValueObservable()
-      // getMultiValueObservable(), forkJoin on works for observables that complete
-    ).pipe(
-      map(([first, second]) => {
-        // forkJoin returns an array of values, here we map those values to an object
-        return { first, second };
-      })
-    );
+
   }
