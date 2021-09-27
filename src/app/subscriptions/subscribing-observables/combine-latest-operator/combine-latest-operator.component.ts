@@ -9,10 +9,11 @@ import { getDelayedValueObservable, getMultiValueObservable, getSingleValueObser
   })
   export class CombineLatestOperatorComponent {
     show = false;
-    values$ = combineLatest(
+    values$ = combineLatest([
       getSingleValueObservable(),
       getDelayedValueObservable(),
       getMultiValueObservable()
+    ]
     ).pipe(
       map(([first, second, third]) => {
         // combineLatest returns an array of values, here we map those values to an object

@@ -10,7 +10,7 @@ import { getDelayedValueObservable, getMultiValueObservable, getSingleValueObser
   <p>{{third}}</p>
 `
 })
-export class ManualSubscriptionsComponent {
+export class ManualSubscriptionsComponent implements OnInit {
     first: string;
     second: string;
     third: number;
