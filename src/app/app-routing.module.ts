@@ -4,10 +4,12 @@ import { AppComponent } from './app.component';
 import { HtmlTableComponent } from './html-table/html-table.component';
 import { MaterialTableComponent } from './material-table/material-table.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 
 const routes: Routes = [
     { path: 'html', component: HtmlTableComponent },
     { path: 'table', component: MaterialTableComponent },
+    { path: 'form', component: ReactiveFormComponent },
     { path: '',   redirectTo: '/html', pathMatch: 'full' }, // redirect to `html`
     { path: '**', component: PageNotFoundComponent }
 ];

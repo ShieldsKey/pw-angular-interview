@@ -10,22 +10,28 @@ import { MaterialTableComponent } from './material-table/material-table.componen
 import { HtmlTableComponent } from './html-table/html-table.component';
 import { RouterModule } from '@angular/router';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     MaterialTableComponent,
     HtmlTableComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    ReactiveFormComponent
   ],
   imports: [
     MatTableModule,
     BrowserModule,
     AppRoutingModule,
     RouterModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
-  providers: [],
+  providers: [
+
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
