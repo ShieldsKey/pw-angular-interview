@@ -1,4 +1,4 @@
-<table class="table table-bordered" *ngIf="baseObject$ | async as baseObject; else loading;">
+<table class="table table-bordered" >
     <thead>
         <tr>
             <th width="50">name</th>
@@ -9,14 +9,14 @@
             <th>keywords</th>
         </tr>
     </thead>
-    <tbody *ngFor="let result of baseObject.results">
+    <tbody>
         <tr>
-            <td>{{result.package.name}}</td>
-            <td>{{result.package.scope}}</td>
-            <td>{{result.package.version }}</td>
-            <td>{{result.package.description}}</td>
-            <td>{{result.package.date}}</td>
-            <td>{{result.package.keywords}}</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
         </tr>
     </tbody>
 </table>

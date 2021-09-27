@@ -7,17 +7,10 @@ import { HttpService } from '../../app/http.service';
   templateUrl: './material-table.component.html',
   styleUrls: ['./material-table.component.scss']
 })
-export class MaterialTableComponent implements OnInit {
+export class MaterialTableComponent {
 
     dataSource: any[];
     displayedColumns: string[] = ['name', 'scope', 'version', 'date'];
     constructor(private readonly httpService: HttpService) { }
 
-    public ngOnInit(): void {
-        this.httpService.getSearchResults().subscribe((data: RootObject) => {
-            this.dataSource = data.results.map((result: Result) => {
-                return result.package;
-            });
-        });
-    }
 }
