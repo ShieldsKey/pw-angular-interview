@@ -4,13 +4,10 @@ import { getDelayedValueObservable, getMultiValueObservable, getSingleValueObser
 
 @Component({
   selector: 'app-subscribing-observables',
-  template: `
-  <p>{{first}}</p>
-  <p>{{second}}</p>
-  <p>{{third}}</p>
-`
+  templateUrl: './manual-subscription.component.html'
 })
 export class ManualSubscriptionsComponent implements OnInit {
+    show = false;
     first: string;
     second: string;
     third: number;
@@ -25,7 +22,7 @@ export class ManualSubscriptionsComponent implements OnInit {
         .subscribe(value => this.second = value);
 
         // the third one continues to send values
-        // need to create a subscription so it can be unsubscribed when the component is descroyed
+        // need to create a subscription so it can be unsubscribed when the component is destroyed
         // to avoid memory leaks
       this.thirdSubscription = getMultiValueObservable()
         .subscribe(value => this.third = value);
