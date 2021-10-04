@@ -14,7 +14,7 @@ export function getMultiValueObservable() {
     let count = 0;
     const interval = setInterval(() => {
       observer.next(count++);
-      console.log('interval fired');
+      console.log('interval fired: ', count);
     }, 1000);
 
     return () => {
