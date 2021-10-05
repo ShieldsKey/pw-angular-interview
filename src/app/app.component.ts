@@ -17,4 +17,8 @@ export class AppComponent {
     public goTable(): void {
         this.router.navigate(['table']);
     }
+
+    public goManualSub(): void {
+        this.router.navigate(['manual']);
+    }
 }

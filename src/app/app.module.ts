@@ -13,10 +13,12 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { SubscriptionsComponent } from './subscriptions/subscribing-observables/subscriptions.component';
+import { ManualSubscriptionsComponent } from './subscriptions/subscribing-observables/manual-subscription/manual-subscription.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    ManualSubscriptionsComponent,
     MaterialTableComponent,
     HtmlTableComponent,
     PageNotFoundComponent,
