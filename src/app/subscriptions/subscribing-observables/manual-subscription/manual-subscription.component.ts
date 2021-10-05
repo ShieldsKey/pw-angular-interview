@@ -21,7 +21,7 @@ export class ManualSubscriptionsComponent  {
       getDelayedValueObservable()
         .subscribe(value => this.second = value);
 
-      this.thirdSubscription = getMultiValueObservable()
+      getMultiValueObservable()
         .subscribe(value => this.third = value);
     }
   }
