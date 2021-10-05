@@ -1,4 +1,4 @@
-<table class="table table-bordered" >
+<table *ngIf="results; else loading;" class="table table-bordered" >
     <thead>
         <tr>
             <th width="50">name</th>
