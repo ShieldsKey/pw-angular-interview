@@ -1,7 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
-import { HttpService } from '../../app/http.service';
-import { RootObject } from '../../app/interfaces/searchResults';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-html-table',
