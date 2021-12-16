@@ -22,14 +22,14 @@ export class MaterialTableComponent implements OnInit, AfterViewInit {
         this.httpService.getSearchResults().pipe(
             finalize(() => {
                 this.loadingData = false;
-                console.log('-----------------data table')
+                console.log('-----------------ngOnInit finalize')
                 console.log('static: false', this.dataTable);
-                console.log(this.dataTableStatic);
+                console.log('static: true',this.dataTableStatic);
                 this.changeDetection.detectChanges();
 
                 console.log('-----------------after change detection')
                 console.log('static: false', this.dataTable);
-                console.log(this.dataTableStatic);
+                console.log('static: true',this.dataTableStatic);
              })
         ).subscribe((data: RootObject) => {
             this.dataSource = data.results.map((result: Result) => {
@@ -41,6 +41,6 @@ export class MaterialTableComponent implements OnInit, AfterViewInit {
     public ngAfterViewInit(): void {
         console.log('-----------------ngAfterViewInit')
         console.log('static: false', this.dataTable);
-        console.log(this.dataTableStatic);
+        console.log('static: true', this.dataTableStatic);
     }
 }
