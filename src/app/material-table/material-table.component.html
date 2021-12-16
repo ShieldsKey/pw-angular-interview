@@ -1,4 +1,4 @@
-<table mat-table *ngIf="dataSource; else loading;" [dataSource]="dataSource" class="mat-elevation-z8" >
+<table mat-table *ngIf="!loadingData; else loading;" #dataTable [dataSource]="dataSource" class="mat-elevation-z8" >
     <ng-container matColumnDef="name">
     <th mat-header-cell *matHeaderCellDef> Name </th>
     <td mat-cell *matCellDef="let element"> {{element.name}} </td>
