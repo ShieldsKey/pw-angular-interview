@@ -5,7 +5,8 @@ import { MaterialTableComponent } from './material-table/material-table.componen
 
 const routes: Routes = [
     { path: 'html', component: HtmlTableComponent },
-    { path: 'table', component: MaterialTableComponent }
+    { path: 'table', component: MaterialTableComponent },
+    { path: '',   redirectTo: '/table', pathMatch: 'full' }
 ];
 
 @NgModule({
