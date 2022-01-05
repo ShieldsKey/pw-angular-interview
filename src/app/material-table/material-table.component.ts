@@ -27,8 +27,8 @@ export class MaterialTableComponent implements OnInit, AfterViewInit {
                 console.log('static: true',this.dataTableStatic);
                 this.changeDetection.detectChanges();
 
-                console.log('-----------------after change detection')
-                console.log('static: false', this.dataTable);
+                console.log('-----------------after change detection call in finalize')
+                console.log('static: false', this.dataTable.dataSource);
                 console.log('static: true',this.dataTableStatic);
              })
         ).subscribe((data: RootObject) => {
